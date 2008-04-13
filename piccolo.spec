@@ -1,13 +1,14 @@
 %include	/usr/lib/rpm/macros.java
 Summary:	Small fast XML parser
+Summary(pl.UTF-8):	Mały, szybki analizator XML-a
 Name:		piccolo
 Version:	1.04
 Release:	0.1
 License:	LGPL
 Group:		Applications/Text
-URL:		http://piccolo.sourceforge.net/
 Source0:	http://dl.sourceforge.net/piccolo/%{name}-%{version}-src.zip
 # Source0-md5:	35448ca6895f716ec14ab11430fd9650
+URL:		http://piccolo.sourceforge.net/
 BuildRequires:	ant >= 0:1.6
 BuildRequires:	ant-junit
 BuildRequires:	jpackage-utils >= 0:1.5.32
@@ -22,19 +23,26 @@ the SAX 1, SAX 2.0.1, and JAXP 1.1 (SAX parsing only) interfaces as a
 non-validating parser and attempts to detect all XML well-formedness
 errors.
 
+%description -l pl.UTF-8
+Piccolo to mały, bardzo szybki analizator XML-a dla Javy. Implementuje
+interfejsy SAX 1, SAX 2.0.1 i JAXP 1.1 (tylko w zakresie analizy SAX)
+jako analizator nie kontrolujący poprawności oraz próbuje wykryć
+wszystkie błędy dobrego formułowania XML.
+
 %package javadoc
-Summary:	Javadoc for %{name}
+Summary:	Javadoc for Piccolo
+Summary(pl.UTF-8):	Dokumentacja javadoc do Piccolo
 Group:		Documentation
 Requires:	jpackage-utils
 
 %description javadoc
-Documentation for %{name}.
+Javadoc documentation for Piccolo.
 
 %description javadoc -l pl.UTF-8
-Dokumentacja do %{name} -
+Dokumentacja javadoc do Piccolo.
 
 %description javadoc -l fr.UTF-8
-Javadoc pour %{name}.
+Javadoc pour Piccolo.
 
 %prep
 %setup -q
