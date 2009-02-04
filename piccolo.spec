@@ -11,6 +11,7 @@ Source0:	http://dl.sourceforge.net/piccolo/%{name}-%{version}-src.zip
 URL:		http://piccolo.sourceforge.net/
 BuildRequires:	ant >= 0:1.6
 BuildRequires:	ant-junit
+BuildRequires:	java-gcj-compat-devel
 BuildRequires:	jpackage-utils >= 0:1.5.32
 BuildRequires:	junit
 BuildRequires:	rpmbuild(macros) >= 1.300
@@ -46,11 +47,12 @@ Javadoc pour Piccolo.
 
 %prep
 %setup -q
-find -name '*.jar' | xargs rm -vf
 
 %build
 export OPT_JAR_LIST="ant/ant-junit junit"
+%ant clean
 %ant -Dbuild.sysclasspath=first \
+	-Dbuild.compiler=gcj \
 	build javadoc
 
 %install
