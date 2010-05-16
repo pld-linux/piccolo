@@ -15,6 +15,7 @@ BuildRequires:	java-gcj-compat-devel
 BuildRequires:	jpackage-utils >= 0:1.5.32
 BuildRequires:	junit
 BuildRequires:	rpmbuild(macros) >= 1.300
+BuildRequires:	unzip
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
