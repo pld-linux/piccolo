@@ -1,4 +1,3 @@
-%include	/usr/lib/rpm/macros.java
 Summary:	Small fast XML parser
 Summary(pl.UTF-8):	Mały, szybki analizator XML-a
 Name:		piccolo
